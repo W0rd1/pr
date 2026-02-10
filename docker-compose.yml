@@ -1,0 +1,7 @@
+services:
+  EngineXStore:
+    container_name: EngineXStore
+    build:
+      context: .
+    ports:
+      - '8080:8080'
