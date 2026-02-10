@@ -1,6 +1,6 @@
 services:
-  EngineXStore:
-    container_name: EngineXStore
+  engine_x_store:
+    container_name: engine_x_store
     build:
       context: .
     ports:
