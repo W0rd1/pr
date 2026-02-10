@@ -1,5 +1,0 @@
-services:
-  engine_x_store:
-    environment:
-      NODE_ENV: development
-    command: npm run start
