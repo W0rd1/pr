@@ -1,0 +1,56 @@
+<header class="w-full bg-white shadow-sm">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <!-- Left: Store Name -->
+    <h1 class="text-2xl font-bold text-gray-800 tracking-tight">EngineXStore</h1>
+
+    <!-- Desktop Menu -->
+    <nav class="hidden md:block">
+      <ul class="flex items-center gap-8 text-gray-600 font-medium">
+        <li><a routerLink="/" class="hover:text-green-600 transition">Home</a></li>
+        <li><a routerLink="/shop" class="hover:text-green-600 transition">Shop</a></li>
+        <li><a routerLink="/categories" class="hover:text-green-600 transition">Categories</a></li>
+        <li><a routerLink="/contact" class="hover:text-green-600 transition">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Right: Profile Photo (Desktop) -->
+    <div
+      class="hidden md:block w-12 h-12 rounded-full overflow-hidden border-2 border-green-500 shadow-md"
+    >
+      <img [src]="ImgUrl" alt="Profile" class="w-full h-full object-cover" />
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button
+      class="md:hidden text-gray-700 focus:outline-none hover:cursor-pointer"
+      (click)="toggleMobileMenu()"
+      aria-label="Toggle menu"
+    >
+      <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Dropdown Menu -->
+  <div
+    class="md:hidden px-6 pb-4 transition-all duration-200 hover:cursor-pointer"
+    [ngClass]="{ hidden: !isMobileMenuOpen }"
+  >
+    <ul class="flex flex-col gap-4 text-gray-700 font-medium">
+      <li><a routerLink="/" class="hover:text-green-600 transition">Home</a></li>
+      <li><a routerLink="/shop" class="hover:text-green-600 transition">Shop</a></li>
+      <li><a routerLink="/categories" class="hover:text-green-600 transition">Categories</a></li>
+      <li><a routerLink="/contact" class="hover:text-green-600 transition">Contact</a></li>
+    </ul>
+
+    <!-- Mobile Profile -->
+    <div class="mt-4 flex justify-end">
+      <div class="w-14 h-14 rounded-full overflow-hidden border-2 border-green-500 shadow-md">
+        <img [src]="ImgUrl" alt="Profile" class="w-full h-full object-cover" />
+      </div>
+    </div>
+  </div>
+</header>
+
+<app-search-bar />

@@ -1,0 +1,60 @@
+<section
+  class="relative w-full h-[70vh] flex items-center justify-center text-center overflow-hidden"
+>
+  <!-- Background Image -->
+  <div
+    class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
+    style="background-image: url('assets/images/hero-lg.jpg')"
+  ></div>
+
+  <!-- Soft Overlay -->
+  <div class="absolute inset-0 bg-gradient-to-b from-white/40 to-black/70"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 max-w-2xl px-6">
+    <h1 class="text-4xl md:text-5xl font-extrabold text-gray-800 drop-shadow-sm">
+      Welcome to <span class="text-white">EngineXStore</span>
+    </h1>
+
+    <p class="mt-4 text-lg md:text-xl text-white">
+      Discover premium products engineered for performance, style, and everyday life.
+    </p>
+
+    <!-- Filter Section -->
+    <div class="mt-8 flex flex-col md:flex-row items-center justify-center gap-4">
+      <!-- Dropdown -->
+      <div class="flex flex-col md:flex-row items-center justify-center gap-4">
+        <!-- Dropdown Wrapper -->
+        <div class="relative">
+          <select
+            class="appearance-none px-5 py-3 bg-white rounded-lg shadow-md text-gray-700 font-medium w-56 focus:outline-none focus:ring-2 focus:ring-green-400 hover:shadow-lg transition-all duration-200 cursor-pointer"
+          >
+            <option selected disabled>Choose a category</option>
+            <option>Engines</option>
+            <option>Accessories</option>
+            <option>Performance Parts</option>
+            <option>Tools</option>
+          </select>
+
+          <!-- Custom Caret Icon -->
+          <svg
+            class="w-5 h-5 text-gray-500 absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
+          </svg>
+        </div>
+
+        <!-- Confirm Button -->
+        <button
+          class="px-8 py-3 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-600 hover:shadow-lg active:bg-green-700 active:scale-95 transition-all duration-200 cursor-pointer"
+        >
+          Apply Filter
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
