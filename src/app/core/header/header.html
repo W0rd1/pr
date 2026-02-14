@@ -6,10 +6,27 @@
     <!-- Desktop Menu -->
     <nav class="hidden md:block">
       <ul class="flex items-center gap-8 text-gray-600 font-medium">
-        <li><a routerLink="/" class="hover:text-green-600 transition">Home</a></li>
-        <li><a routerLink="/shop" class="hover:text-green-600 transition">Shop</a></li>
-        <li><a routerLink="/categories" class="hover:text-green-600 transition">Categories</a></li>
-        <li><a routerLink="/contact" class="hover:text-green-600 transition">Contact</a></li>
+        <li>
+          <a routerLink="/" class="hover:text-green-600 transition" [ActiveState]="'home'">Home</a>
+        </li>
+        <li>
+          <a routerLink="/shop" class="hover:text-green-600 transition" [ActiveState]="'shop'"
+            >Shop</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/categories"
+            class="hover:text-green-600 transition"
+            [ActiveState]="'categories'"
+            >Categories</a
+          >
+        </li>
+        <li>
+          <a routerLink="/contact" class="hover:text-green-600 transition" [ActiveState]="'contact'"
+            >Contact</a
+          >
+        </li>
       </ul>
     </nav>
 
@@ -17,7 +34,9 @@
     <div
       class="hidden md:block w-12 h-12 rounded-full overflow-hidden border-2 border-green-500 shadow-md"
     >
-      <img [src]="ImgUrl" alt="Profile" class="w-full h-full object-cover" />
+      <a href="/profile">
+        <img [src]="ImgUrl" alt="Profile" class="w-full h-full object-cover" />
+      </a>
     </div>
 
     <!-- Mobile Menu Button -->
@@ -38,16 +57,35 @@
     [ngClass]="{ hidden: !isMobileMenuOpen }"
   >
     <ul class="flex flex-col gap-4 text-gray-700 font-medium">
-      <li><a routerLink="/" class="hover:text-green-600 transition">Home</a></li>
-      <li><a routerLink="/shop" class="hover:text-green-600 transition">Shop</a></li>
-      <li><a routerLink="/categories" class="hover:text-green-600 transition">Categories</a></li>
-      <li><a routerLink="/contact" class="hover:text-green-600 transition">Contact</a></li>
+      <li>
+        <a routerLink="/" class="hover:text-green-600 transition" [ActiveState]="'home'">Home</a>
+      </li>
+      <li>
+        <a routerLink="/shop" class="hover:text-green-600 transition" [ActiveState]="'shop'"
+          >Shop</a
+        >
+      </li>
+      <li>
+        <a
+          routerLink="/categories"
+          class="hover:text-green-600 transition"
+          [ActiveState]="'categories'"
+          >Categories</a
+        >
+      </li>
+      <li>
+        <a routerLink="/contact" class="hover:text-green-600 transition" [ActiveState]="'contact'"
+          >Contact</a
+        >
+      </li>
     </ul>
 
     <!-- Mobile Profile -->
     <div class="mt-4 flex justify-end">
       <div class="w-14 h-14 rounded-full overflow-hidden border-2 border-green-500 shadow-md">
-        <img [src]="ImgUrl" alt="Profile" class="w-full h-full object-cover" />
+        <a href="/profile">
+          <img [src]="ImgUrl" alt="Profile" class="w-full h-full object-cover" />
+        </a>
       </div>
     </div>
   </div>

@@ -1,6 +1,5 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { Banner } from '../../features/banner/banner';
-
 
 @Component({
   selector: 'app-search-bar',
@@ -9,6 +8,4 @@ import { Banner } from '../../features/banner/banner';
   templateUrl: './search-bar.html',
   styleUrl: './search-bar.css',
 })
-export class SearchBar {
-  
-}
+export class SearchBar {}
