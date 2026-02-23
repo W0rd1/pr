@@ -1,10 +1,14 @@
-import { Injectable, inject } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
-export class Product {
-
+export class ProductService {
+  private apiUrl = 'https://dummyjson.com/products/?limit=7';
+  constructor(private http: HttpClient) {}
+  getProducts(): Observable<any> {
+    return this.http.get(this.apiUrl);
+  }
 }

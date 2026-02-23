@@ -1,7 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { Banner } from '../../features/banner/banner';
 
-
 @Component({
   selector: 'app-search-bar',
   standalone: true,
@@ -10,5 +9,5 @@ import { Banner } from '../../features/banner/banner';
   styleUrl: './search-bar.css',
 })
 export class SearchBar {
-  
+
 }
